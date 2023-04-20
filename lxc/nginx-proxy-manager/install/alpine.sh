@@ -66,7 +66,7 @@ fi
 
 log "Checking for latest openresty repository"
 . /etc/os-release
-_alpine_version=${VERSION_ID%.*}
+_alpine_version=3.16.4
 # add openresty public key
 if [ ! -f /etc/apk/keys/admin@openresty.com-5ea678a6.rsa.pub ]; then
   runcmd 'wget $WGETOPT -P /etc/apk/keys/ http://openresty.org/package/admin@openresty.com-5ea678a6.rsa.pub'
